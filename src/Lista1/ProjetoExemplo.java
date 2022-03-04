@@ -27,14 +27,17 @@ public class ProjetoExemplo {
 			}
 			
 		}while(!advinhou);
-
 		
-		// TODO Auto-generated method stub
-		/*Porta porta = new Porta();		
-		porta.abrir();
-		
+		Porta porta = new Porta();		
+		porta.abrir();		
 		Boolean portaAberta = porta.isOpen;
-		System.out.println("resultado = " + portaAberta);*/
+		if(portaAberta) {
+			System.out.println("resultado a porta esta aberta");
+		}
+		else {
+			System.out.println("resultado a porta esta fechada");
+		}
+	
 	}
 
 }
