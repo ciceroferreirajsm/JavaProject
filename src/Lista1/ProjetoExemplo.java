@@ -6,12 +6,14 @@ public class ProjetoExemplo {
 
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		
 		//Jogo do advinha de 1 a 99
 		JogoAdvinha jogoAdvinha = new JogoAdvinha();			
 		int numeroSorteado = jogoAdvinha.Sortear();
 		int numeroRecebido;
 		boolean advinhou;
-		Scanner sc = new Scanner(System.in);
 		
 		do
 		{
@@ -28,6 +30,27 @@ public class ProjetoExemplo {
 			
 		}while(!advinhou);
 		
+		
+		//calculo delta		
+		System.out.println("Digite o primeiro numero para calcular o delta: ");
+		double a = sc.nextDouble();
+		System.out.println("Digite o segundo numero para calcular o delta: ");
+		double b = sc.nextDouble();	
+		System.out.println("Digite o terceiro numero para calcular o delta: ");
+		double c = sc.nextDouble();	
+		
+		EqGrau eqGrau = new EqGrau(a, b, c);		
+		double delta = eqGrau.Delta();
+		double raiz1 = eqGrau.Raiz1(delta);
+		double raiz2 = eqGrau.Raiz2(delta);
+		
+		System.out.println("resultado delta = " + delta);
+		System.out.println("resultado Raiz 1 = " + raiz1);
+		System.out.println("resultado Raiz 2 = " + raiz2);		
+		
+		
+		
+		//verificar porta aberta ou fechada
 		Porta porta = new Porta();		
 		porta.abrir();		
 		Boolean portaAberta = porta.isOpen;

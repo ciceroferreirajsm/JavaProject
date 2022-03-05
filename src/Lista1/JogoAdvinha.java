@@ -12,7 +12,7 @@ public class JogoAdvinha {
 	}
 	
 	public int Sortear(){
-		numeroSorteado = gerador.nextInt(20);
+		numeroSorteado = gerador.nextInt(5);
 		
 		return numeroSorteado;
 	}
